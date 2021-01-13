@@ -13,6 +13,10 @@
 
 # VFluent For Electron
 
+<p align="center">
+    <img src="./src/assets/sample.png"/>
+</div>
+
 ## Before You Start
 
 You will need Visual Studio or Visual C++ build tools to install this.
