@@ -24,6 +24,11 @@ export default {
             default: "Welcome to VFluent for Electron!",
         },
     },
+    methods: {
+        to () {
+            window.location = 'https://github.com/aleversn/VFluentForElectron';
+        }
+    }
 };
 </script>
 
@@ -43,6 +48,18 @@ li {
 a {
     color: #42b983;
 }
+.hello
+{
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .button
 {
     display: flex;
@@ -50,13 +67,3 @@ a {
     align-items: center;
 }
 </style>
-
-<script>
-export default {
-    methods: {
-        to () {
-            window.location = 'https://github.com/aleversn/VFluentForElectron';
-        }
-    }
-}
-</script>

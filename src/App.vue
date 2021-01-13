@@ -1,26 +1,42 @@
 <template>
     <div id="app">
-        <router-view></router-view>
+        <title-bar></title-bar>
+        <div class="global-container">
+            <router-view></router-view>
+        </div>
     </div>
 </template>
 
 <script>
+import titleBar from '@/components/general/titleBar.vue';
+
 export default {
-    name: "App"
+    name: "App",
+    components: {
+        titleBar
+    }
 };
 </script>
 
-<style>
+<style lang="scss">
 html {
-    background: rgba(255, 255, 255, 0.8);
+    background: transparent;
 }
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-    background: rgba(255, 255, 255 0.1);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .global-container
+    {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        flex: 1;
+    }
 }
 </style>

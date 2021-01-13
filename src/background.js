@@ -1,6 +1,6 @@
 'use strict'
 
-import { app, protocol } from 'electron'
+import { app, protocol, ipcMain } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
 const isDevelopment = process.env.NODE_ENV !== 'production'
@@ -19,7 +19,6 @@ async function createWindow() {
         frame: false,
         width: 800,
         height: 600,
-        transparent: true,
         vibrancy: {
             theme: 'appearance-based',
             effect: 'acrylic',
@@ -34,6 +33,21 @@ async function createWindow() {
             devTools: true
         }
     })
+
+    ipcMain.on("min", () => {
+        win.minimize();
+    });
+
+    ipcMain.on("max", () => {
+        if(win.isMaximized())
+            win.restore();
+        else
+            win.maximize();
+    });
+
+    ipcMain.on("close", () => {
+        win.close();
+    });
 
     if (process.env.WEBPACK_DEV_SERVER_URL) {
         // Load the url of the dev server if in development mode

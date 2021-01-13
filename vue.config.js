@@ -21,5 +21,10 @@ module.exports = {
             },
             extensions: ["*", ".js", ".vue", ".json"]
         }
+    },
+    pluginOptions: {    // necessary plugins
+        electronBuilder: {
+            nodeIntegration: true
+        }
     }
 };
