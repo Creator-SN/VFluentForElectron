@@ -14,7 +14,7 @@
 # VFluent For Electron
 
 <p align="center">
-    <img src="./src/assets/sample.png"/>
+    <img src="./src/assets/Sample.png"/>
 </div>
 
 ## Before You Start
