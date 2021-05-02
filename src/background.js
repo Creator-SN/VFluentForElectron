@@ -1,12 +1,9 @@
 'use strict'
 
-import { app, protocol, ipcMain } from 'electron'
+import { app, protocol, ipcMain, BrowserWindow } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
 const isDevelopment = process.env.NODE_ENV !== 'production'
-
-// Use Acrylic
-const { BrowserWindow } = require("electron-acrylic-window");
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
@@ -19,13 +16,6 @@ async function createWindow() {
         frame: false,
         width: 800,
         height: 600,
-        vibrancy: {
-            theme: 'appearance-based',
-            effect: 'acrylic',
-            useCustomWindowRefreshMethod: true,
-            maximumRefreshRate: 60,
-            disableOnBlur: true
-        },
         webPreferences: {
             // Use pluginOptions.nodeIntegration, leave this alone
             // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
