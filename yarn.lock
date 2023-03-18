@@ -3960,6 +3960,13 @@ dom-serializer@^1.0.1:
     domhandler "^4.2.0"
     entities "^2.0.0"
 
+dom7@^4.0.4:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-4.0.6.tgz#091a51621d7a19ce0fb86045cafb3c10035e97ed"
+  integrity sha512-emjdpPLhpNubapLFdjNL9tP06Sr+GZkrIHEXLWvOGsytACUrkbeIdjO5g77m00BrHTznnlcNqgmn7pCN192TBA==
+  dependencies:
+    ssr-window "^4.0.0"
+
 domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
@@ -9696,6 +9703,11 @@ sshpk@^1.7.0:
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
 
+ssr-window@^4.0.0, ssr-window@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-4.0.2.tgz#dc6b3ee37be86ac0e3ddc60030f7b3bc9b8553be"
+  integrity sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==
+
 ssri@^6.0.1:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.2.tgz#157939134f20464e7301ddba3e90ffa8f7728ac5"
@@ -9989,6 +10001,14 @@ svgo@^1.0.0:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+swiper@^8.3.2:
+  version "8.4.7"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-8.4.7.tgz#0301d385c3efc8efe8b66a64187edcb30e3067ee"
+  integrity sha512-VwO/KU3i9IV2Sf+W2NqyzwWob4yX9Qdedq6vBtS0rFqJ6Fa5iLUJwxQkuD4I38w0WDJwmFl8ojkdcRFPHWD+2g==
+  dependencies:
+    dom7 "^4.0.4"
+    ssr-window "^4.0.2"
 
 table@^5.2.3:
   version "5.4.6"
@@ -10703,16 +10723,17 @@ verror@^1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vfluentdesign@^0.1.86:
-  version "0.1.86"
-  resolved "https://registry.yarnpkg.com/vfluentdesign/-/vfluentdesign-0.1.86.tgz#6a1ee2b32030d8b4c0ba7435eed077bd3b78174c"
-  integrity sha512-K4OGByzu7MGYn3R1lf7iA2caQvDf/Cvw6nDZ0Nv4Rh1B3HCOkIWeEC4736Hdhny4Xj8sDrNYgDGnHtyYiM5BuQ==
+vfluentdesign@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/vfluentdesign/-/vfluentdesign-0.5.3.tgz#51a97c11dd653f738541efdd4a0b6858c1640943"
+  integrity sha512-GPyhM8Tu9WXRArZe2C0h7uHHQxWlMAQY1Z3mUiXIT9xjJ6ZOhom+pWd3xVpx/VdKUVw9oxv7vTvEDSeufVmVAA==
   dependencies:
     core-js "^3.4.3"
     fluent-reveal-effect "^1.1.1"
     gsap "^3.1.1"
     office-ui-fabric-core "^11.0.0"
     onecolor "^3.1.0"
+    swiper "^8.3.2"
     vuedraggable "^2.23.2"
     vuex "^3.1.2"
 
