@@ -3,6 +3,9 @@
 import { app, protocol, ipcMain, BrowserWindow } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
+import * as remote from "@electron/remote/main";
+remote.initialize();
+
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Scheme must be registered before the app is ready
@@ -16,6 +19,8 @@ async function createWindow() {
         frame: false,
         width: 800,
         height: 600,
+        transparent: false,
+        backgroundMaterial: "acrylic",
         webPreferences: {
             enableRemoteModule: true,
             // Use pluginOptions.nodeIntegration, leave this alone
@@ -26,12 +31,16 @@ async function createWindow() {
         }
     })
 
+    remote.enable(win.webContents);
+
+    win.setMenu(null);
+
     ipcMain.on("min", () => {
         win.minimize();
     });
 
     ipcMain.on("max", () => {
-        if(win.isMaximized())
+        if (win.isMaximized())
             win.restore();
         else
             win.maximize();
