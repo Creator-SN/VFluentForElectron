@@ -15,7 +15,8 @@
   "dependencies": {
     "@electron/remote": "^2.0.8",
     "core-js": "^3.6.5",
-    "node-sass": "^4.14.1",
+    "dart-sass": "^1.25.0",
+    "sass": "^1.61.0",
     "npm-check": "^5.9.2",
     "sass-loader": "^8.0.2",
     "vfluentdesign": "^1.0.2",
