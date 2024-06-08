@@ -17,19 +17,6 @@
     <img src="./src/assets/Sample.png"/>
 </div>
 
-## Before You Start
-
-You will need Visual Studio or Visual C++ build tools to install this.
-```
-npm install --global windows-build-tools
-```
-
-or
-
-```
-yarn global add windows-build-tools
-```
-
 ## Project setup
 
 ```
@@ -78,7 +65,7 @@ yarn lint
 
 MIT License
 
-Copyright (c) 2023 Creator SN®
+Copyright (c) 2024 Creator SN®
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

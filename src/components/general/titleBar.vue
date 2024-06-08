@@ -25,7 +25,7 @@
     width: 100%;
     min-height: 32px;
     height: 32px;
-    background: white;
+    background: rgba(255, 255, 255, 0.3);
     display: flex;
     justify-content: space-between;
     align-items: center;
